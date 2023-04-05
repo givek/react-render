@@ -1,5 +1,7 @@
 import ObjectUseReducer from "./components/ImmutableState/ObjectUseReducer";
 import ObjectUseState from "./components/ImmutableState/ObjectUseState";
+import ChildOne from "./components/Optimization/ChildOne";
+import ParentOne from "./components/Optimization/ParentOne";
 import Parent from "./components/ParentChild/Parent";
 import UseReducer from "./components/UseReducer/UseReducer";
 import UseState from "./components/UseState/UseState";
@@ -11,7 +13,10 @@ function App() {
       {/* <UseReducer /> */}
       {/* <ObjectUseState />
       <ObjectUseReducer /> */}
-      <Parent />
+      {/* <Parent /> */}
+      <ParentOne>
+        <ChildOne />
+      </ParentOne>
     </div>
   );
 }
