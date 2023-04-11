@@ -1,5 +1,6 @@
 import React from "react";
 import MemoizedChildThree from "./ChildThree";
+import MemoizedChildFour from "./ChildFour";
 
 function ParentThree() {
   const [count, setCount] = React.useState(0);
@@ -20,9 +21,10 @@ function ParentThree() {
       >
         Change Pet
       </button>
-      <MemoizedChildThree name={pet}>
+      {/* <MemoizedChildThree name={pet}>
         <strong>Hello</strong>
-      </MemoizedChildThree>
+      </MemoizedChildThree> */}
+      <MemoizedChildFour name={pet} />
     </div>
   );
 }
