@@ -1,5 +1,5 @@
 import React from "react";
-import ChildA from "./ContextChildren";
+import MemoizedChildA from "./ContextChildren";
 
 export const CounterContext = React.createContext(0);
 
@@ -12,11 +12,14 @@ function ContextParent() {
 
   // Also, the children components of all the re-rendered components will re-render.
 
+  // Now, as the child component is wraped with React.memo, it will not re-render if the props don't change.
+  // But, the ChildC component still re-renders as it is consuming the context value.
+
   return (
     <>
       <button onClick={() => setCount(count + 1)}>increment</button>
       <CounterContext.Provider value={count}>
-        <ChildA />
+        <MemoizedChildA />
       </CounterContext.Provider>
     </>
   );

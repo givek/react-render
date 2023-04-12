@@ -35,4 +35,4 @@ function ChildA() {
   );
 }
 
-export default ChildA;
+export default React.memo(ChildA);
