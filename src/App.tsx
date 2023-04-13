@@ -1,3 +1,4 @@
+import ChildA from "./components/Context/ContextChildren";
 import ContextParent from "./components/Context/ContextParent";
 import ObjectUseReducer from "./components/ImmutableState/ObjectUseReducer";
 import ObjectUseState from "./components/ImmutableState/ObjectUseState";
@@ -22,7 +23,9 @@ function App() {
       </ParentOne> */}
       {/* <ParentTwo /> */}
       {/* <ParentThree /> */}
-      <ContextParent />
+      <ContextParent>
+        <ChildA />
+      </ContextParent>
     </div>
   );
 }
